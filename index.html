@@ -1,0 +1,165 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="日本語で台湾華語の注音符号を学習できるサイト">
+    <title>注音符号表｜台湾華語学習サイト</title>
+</head>
+
+<body>
+
+    <!-- サイトのヘッダー -->
+    <header>
+        <div class="header-inner">
+
+            <!-- サイト名 -->
+            <h1>???? 注音符号表</h1>
+
+            <!-- ナビゲーションメニュー -->
+            <nav aria-label="メインメニュー">
+                <a href="#home">ホーム</a>
+                <a href="#quiz">クイズ</a>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- メインコンテンツ -->
+    <main>
+
+        <!-- 注音符号の学習ページ -->
+        <section id="home">
+
+            <h2>注音符号表</h2>
+
+            <p>
+                台湾華語で使われる37個の注音符号を、
+                日本語の説明と音声で学習できるサイトです。
+            </p>
+
+            <p>
+                注音符号と中国語の例単語をクリックすると、
+                それぞれの発音を聞くことができます。
+            </p>
+
+            <!-- 注音符号の一覧 -->
+            <div id="symbol-groups">
+
+                <!-- 声母の表示エリア -->
+                <section>
+                    <h3>声母（21文字）</h3>
+                    <div id="initial-grid"></div>
+                </section>
+
+                <!-- 韻母の表示エリア -->
+                <section>
+                    <h3>韻母（13文字）</h3>
+                    <div id="final-grid"></div>
+                </section>
+
+                <!-- 介音の表示エリア -->
+                <section>
+                    <h3>介音（3文字）</h3>
+                    <div id="medial-grid"></div>
+                </section>
+
+            </div>
+
+            <!-- 声調の学習エリア -->
+            <section id="tone-practice">
+
+                <h2>声調の練習</h2>
+
+                <p>
+                    中国語には4つの声調と軽声があります。
+                    音声を聞いて違いを確認しましょう。
+                </p>
+
+                <!-- 声調カードの表示エリア -->
+                <div id="tone-cards"></div>
+
+            </section>
+
+        </section>
+
+        <!-- 注音符号のクイズページ -->
+        <section id="quiz">
+
+            <h2>注音クイズ</h2>
+
+            <p>
+                注音符号を見て、正しい日本語の近似音を選ぶ
+                4択クイズです。
+            </p>
+
+            <!-- クイズ開始画面 -->
+            <div id="quiz-start">
+                <h3>全10問</h3>
+                <p>37個の注音符号からランダムに出題します。</p>
+                <button type="button" id="start-button">
+                    テストを始める
+                </button>
+            </div>
+
+            <!-- クイズ出題画面 -->
+            <div id="quiz-question" hidden>
+
+                <p id="quiz-progress">問題 1 / 10</p>
+                <p id="quiz-score">正解 0</p>
+
+                <!-- 問題の注音符号 -->
+                <div id="question-symbol"></div>
+
+                <!-- 4択の選択肢 -->
+                <div id="answer-list"></div>
+
+                <!-- 正誤判定の表示 -->
+                <p id="answer-feedback"></p>
+
+                <button type="button" id="next-button" hidden>
+                    次の問題へ
+                </button>
+
+            </div>
+
+            <!-- クイズ結果画面 -->
+            <div id="quiz-result" hidden>
+
+                <h3>クイズ結果</h3>
+
+                <p id="result-score">0 / 10</p>
+                <p id="result-text"></p>
+
+                <button type="button" id="restart-button">
+                    もう一度挑戦する
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- 音声素材の著作権表示 -->
+    <footer>
+
+        <p>2017 ? 教育部，國語注音符號手冊-開放部件。</p>
+
+        <p>
+            注音音声素材：
+            <a href="https://creativecommons.org/licenses/by/4.0/deed.zh_TW"
+               target="_blank"
+               rel="noopener noreferrer">
+                CC BY 4.0
+            </a>
+        </p>
+
+        <p>例単語の音声：ブラウザの音声合成</p>
+
+    </footer>
+
+</body>
+</html>
